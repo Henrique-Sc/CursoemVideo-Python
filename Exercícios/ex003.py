@@ -1,0 +1,6 @@
+print('========Calculadora========')
+x = int(input('Valor de X: '))
+y = int(input('Valor de Y: '))
+print(f'A soma entre {x} e {y} é {x+y}.')
+print(' ')
+print('======Soma concluída!======')
