@@ -63,7 +63,7 @@ while True:
     # Verificando o valor inserido, para trata-lo corretamente
     if levant == 999:
         break
-    elif levant >= len(jogadores or levant < 0):
+    elif levant >= len(jogadores) or levant < 0:
         print('')
         while True:
             levant = int(input(f'{IR}Valor incorreto!{r} Digite corretamente o número do(a) jogador(a): ').strip())
