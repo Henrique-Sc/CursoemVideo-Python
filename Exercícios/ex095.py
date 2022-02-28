@@ -1,7 +1,4 @@
 # Cores
-from tkinter import Widget
-
-
 r = '\033[m'
 IR = '\033[38;5;9m'
 IB = '\033[38;5;12m'
@@ -79,7 +76,7 @@ while True:
     
     for i, gols in enumerate(jogadores[levant]['gols']):
         if gols == 0:
-            print(f'\t> Não fez nenhum gols na {i + 1}ª partida')
+            print(f'\t> Não fez nenhum gol na {i + 1}ª partida')
         elif gols == 1:
             print(f'\t> Fez {gols} gol na {i + 1}ª partida')
         elif gols > 1:
