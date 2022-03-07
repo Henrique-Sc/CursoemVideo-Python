@@ -1,5 +1,8 @@
+# Import
 from datetime import datetime
 from time import sleep as s
+
+# Pegando dados iniciais
 user = {
     'Nome': str(input('Nome: ')).strip().upper(),
     'Idade': datetime.now().year - int(input('Ano de nascimento: ').strip()),
