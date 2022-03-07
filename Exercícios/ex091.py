@@ -9,10 +9,11 @@ sort = {
     'Jogador 4': randint(1, 6)
 }
 
-print(f'Valores que serão sorteados:')
+print(f'-=-=-= Jogo de dados =-=-=-')
+print(f'\nValores que serão sorteados:')
 sleep(0.8)
 for k, v in sort.items():
-    print(f'\t{k} tirou {v} no dado.')
+    print(f'  - {k} tirou {v} no dado.')
     sleep(0.8)
 
 # função sorted: coloca dados em ordem (tuplas e listas, podendo ter números ou letras)
@@ -23,5 +24,7 @@ ranking = sorted(sort.items(), key=itemgetter(1), reverse=True)
 print('\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=')
 
 print(f'\nRanking dos jogadores: ')
-for i, l in enumerate(ranking):
-    print(f'\t> {i + 1}º Lugar: {l[0]} com {l[1]}.')
+sleep(0.8)
+for i, jogador in enumerate(ranking):
+    print(f'  > {i + 1}º Lugar: {jogador[0]} com {jogador[1]}.')
+    sleep(0.8)
