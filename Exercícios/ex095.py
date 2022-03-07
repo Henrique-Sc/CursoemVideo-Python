@@ -57,6 +57,7 @@ print('\n' + '=' * title)
 # Dados mais detalhados
 print('\n~Digite o código do jogador')
 # While para a inserção dos dados
+
 while True:
     levant = int(input('\nMostrar dados de qual jogador(a)? (999 para parar) ').strip())
 
@@ -74,12 +75,16 @@ while True:
     title = len(str(f'\n-- Levantamento do(a) jogador(a) {jogadores[levant]["nome"]} --'))
     print(f'\n-- Levantamento do(a) jogador(a) {jogadores[levant]["nome"]} --')
     
-    for i, gols in enumerate(jogadores[levant]['gols']):
-        if gols == 0:
-            print(f'\t> Não fez nenhum gol na {i + 1}ª partida')
-        elif gols == 1:
-            print(f'\t> Fez {gols} gol na {i + 1}ª partida')
-        elif gols > 1:
-            print(f'\t> Fez {gols} gols na {i + 1}ª partida')
-
+    # Mostrando o relatório
+    if jogadores[levant]['partidas'] != 0:
+        for i, gols in enumerate(jogadores[levant]['gols']): 
+            if gols == 0:
+                print(f'\t> Não fez nenhum gol na {i + 1}ª partida')
+            elif gols == 1:
+                print(f'\t> Fez {gols} gol na {i + 1}ª partida')
+            elif gols > 1:
+                print(f'\t> Fez {gols} gols na {i + 1}ª partida')
+    else:
+        print('\t> Não jogou nenhuma partida')
+        
 print(f'\n{IB}<- Programa finalizado ->{r}')
