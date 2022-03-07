@@ -9,12 +9,13 @@ cont = 0
 while True:
     print('-' * 38)  # Linha para Design
     jogadores.append({'nome': str(input('Nome do(a) jogador(a): ')).strip().title(), 'gols': list()})
-    # noinspection PyTypeChecker
     
+    # noinspection PyTypeChecker
     jogadores[cont]['partidas'] = int(input(f'Quantas partidas {jogadores[cont]["nome"]} jogou? '))
     if jogadores[cont]['partidas'] == 0:
         jogadores[cont]['gols'].append(0)
     print()
+    
     # noinspection PyTypeChecker
     for c in range(jogadores[cont]['partidas']):
         jogadores[cont]['gols'].append(int(input(f'Quantos gols na {c + 1}ª partida? ')))
@@ -64,6 +65,7 @@ while True:
     # Verificando o valor inserido, para trata-lo corretamente
     if levant == 999:
         break
+    
     elif levant >= len(jogadores) or levant < 0:
         print('')
         while True:
@@ -75,7 +77,7 @@ while True:
     title = len(str(f'\n-- Levantamento do(a) jogador(a) {jogadores[levant]["nome"]} --'))
     print(f'\n-- Levantamento do(a) jogador(a) {jogadores[levant]["nome"]} --')
     
-    # Mostrando o relatório
+    # Mostrando o levantamento
     if jogadores[levant]['partidas'] != 0:
         for i, gols in enumerate(jogadores[levant]['gols']): 
             if gols == 0:
