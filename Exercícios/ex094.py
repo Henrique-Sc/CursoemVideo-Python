@@ -1,5 +1,5 @@
 # Imports
-from time import sleep as s
+from time import sleep
 
 # Cores no terminal
 r = '\033[m'
@@ -59,28 +59,31 @@ if len(tot_m) == 0:
 media_idade = tot_idade / tot_pessoas
 
 # linha para design
-s(0.5), print('==' * 20, '\n'), s(0.5)
+sleep(0.5), print('==' * 20, '\n'), sleep(0.5)
 
 # Exibição dos dados
 print(f'- Número de pessoas cadastradas: {tot_pessoas}')
-s(0.5)
+sleep(0.5)
 print(f'- Média de idade do grupo: {media_idade:.1f}')
-s(0.5)
+sleep(0.5)
 print(f'- Nome das mulheres cadastradas: {tot_m}')
-s(0.5)
+sleep(0.5)
 print(f'- Pessoas com idade maior que a média do grupo: ')
-s(0.5)
+sleep(0.5)
 
-c = 0
-for p in enumerate(pessoas:
+for i, p in enumerate(pessoas):
     if p['idade'] > media_idade:
-        c += 1
         print('   -> ', end='')
         for k, v in p.items():
             print(f'{k.title()}: {v}; ', end='')
-        print()
+        
+        print(), sleep(0.5)
+        
+if i == 0:
+    print('   -- Nenhuma pessoa com a idade maior que a média')
+sleep(0.5)
 
-print('   -- Nenhuma pessoa com idade maior que a média')
+
 # Linha para design
 print()
-print('==' * 20), s(0.5)
+print('==' * 20), sleep(0.5)
