@@ -44,15 +44,18 @@ while True:
 # Declarando as variáveis
 tot_pessoas = len(pessoas)
 tot_idade = 0
-tot_m = []
+tot_m = list()
 
 # Laços para análise dos dados
 for p in pessoas:
     tot_idade += p['idade']
+    
     if p['sexo'] == 'F':
         tot_m.append(p['nome'])
-if tot_m == []:
+
+if len(tot_m) == 0:
     tot_m = 'Nenhuma mulher foi cadastrada'
+    
 media_idade = tot_idade / tot_pessoas
 
 # linha para design
