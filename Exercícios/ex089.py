@@ -1,26 +1,41 @@
+# Imports
 from statistics import mean
 from time import sleep
 
-reset = '\033[m'
-red = '\033[31m'
-blue = '\033[34m'
+# Cores
+r = '\033[m'
+IR = '\033[38;5;9m'
+IB = '\033[38;5;12m'
 negrito = '\033[1m'
 
 alunos = list()
 
+# Título
 print('-=--=--= Boletim escolar =--=--=-')
 
+# While para inserção dos dados
 while True:
     nome = (str(input('\nPrimeiro nome do aluno: ').strip().title()))
-    notas = [(float(input('Nota 1: ').strip())), float(input('Nota 2: ').strip())]
+    notas = [float(input('Nota 1: ').strip()), float(input('Nota 2: ').strip())]
     media = mean(notas)
 
     alunos.append([nome, notas[:], media])
+
     sleep(0.3)
-    esc = input(f'\nDeseja continuar? [{blue}Sim{reset} / {red}Não{reset}]: ').strip().upper()[0]
+
+    while True:
+        esc = input(f'\nDeseja continuar? [{IB}S{r}im / {IR}N{r}ão]: ').strip().upper()[0]
+        # Tratamento de erros
+        if esc not in 'SN':
+            print(f'{IR}Valor incorreto!{r} Digite novamente.')
+            esc = input(f'\nDeseja continuar? [{IB}S{r}im / {IR}N{r}ão]: ').strip().upper()[0]
+        break
+
     sleep(0.3)
+
     if esc == 'N':
         break
+
 print(alunos)
 
 print('\n', '-=' * 20)
@@ -29,7 +44,7 @@ print('')
 
 print('\t', '-' * 31)
 sleep(0.3)
-print(f'\t | {negrito}Nº  | Nome         | Média  {reset}|')
+print(f'\t | {negrito}Nº  | Nome         | Média  {r}|')
 sleep(0.3)
 
 n = 1
@@ -49,7 +64,7 @@ while True:
     ver_nota = int(input('\nDeseja mostrar as notas de qual aluno(a)? ').strip())
     sleep(0.5)
     while ver_nota < 0 or ver_nota > len(alunos):
-        ver_nota = int(input(f'\n{red}Valor inválido! Digite o número correto de um dos alunos: {reset}').strip())
+        ver_nota = int(input(f'\n{IR}Valor inválido! Digite o número correto de um dos alunos: {r}').strip())
         sleep(0.5)
 
     if ver_nota == 0:
