@@ -64,8 +64,8 @@ sleep(0.5)
 
 # Dados mais detalhados
 print('\n~Digite o código do jogador')
-# While para a inserção dos dados
 
+# While para a inserção dos dados
 while True:
     levant = int(input('\nMostrar dados de qual jogador(a)? (999 para parar) ').strip())
 
