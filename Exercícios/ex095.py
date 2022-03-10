@@ -12,7 +12,6 @@ while True:
     print('-' * 38)  # Linha para Design
     jogadores.append({'nome': str(input('Nome do(a) jogador(a): ')).strip().title(), 'gols': list()})
     
-    # noinspection PyTypeChecker
     jogadores[cont]['partidas'] = int(input(f'Quantas partidas {jogadores[cont]["nome"]} jogou? '))
     if jogadores[cont]['partidas'] == 0:
         jogadores[cont]['gols'].append(0)
