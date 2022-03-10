@@ -1,3 +1,5 @@
+from time import sleep
+
 # Cores
 r = '\033[m'
 IR = '\033[38;5;9m'
@@ -43,17 +45,23 @@ for c, jogador in enumerate(jogadores):
 n += 1
 title = len(str(f'{"Cod":<4} {"nome":<{n+1}} {"total de gols"}'))
 
+sleep(0.5)
 # Linha para design
 print('\n' + '=' * title)
+sleep(0.5)
 
 # Título da tabela
-print(f'{"Cod":<4} {"nome":<{n+1}} {"Total de gols"}')
+print(f'{"Cod":<4} {"Nome":<{n+1}} {"Total de gols"}')
+sleep(0.5)
+
 # Mostrando os dados em forma de tabela
 for c, jogador in enumerate(jogadores):
     print(f' {c:<4} {jogador["nome"]:<{n+1}} {sum(jogador["gols"])}')
-
+    sleep(0.5)
+    
 # linha para design
 print('\n' + '=' * title)
+sleep(0.5)
 
 # Dados mais detalhados
 print('\n~Digite o código do jogador')
