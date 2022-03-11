@@ -1,8 +1,15 @@
+def título(txt):
+    print('------------------------------')
+    print(f'{txt:^30}')
+    print('------------------------------\n')
 
+def sep():
+    print('\n==============================')
+    print('==============================\n')
 
-print(f'{"CURSO EM VÍDEO":^30}')
+título('CURSO EM VÍDEO')
 
-print(f'{"Henrique da Silva Costa":^30}')
+título('Henrique da Silva Costa')
 
-print(f'{"Textinho feliz :)":^30}')
+título('Textinho feliz :)')
 
