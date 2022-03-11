@@ -5,4 +5,8 @@ def escreva(txt):
     print('-' * tam_txt)
 
 
-print()
+escreva('Olá mundo')
+print('')
+escreva('Henrique da SIlva Costa')
+print('')
+escreva('python')
