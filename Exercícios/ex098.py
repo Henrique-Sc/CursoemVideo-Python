@@ -9,3 +9,5 @@
 #            > Se o passo for negativo ou zero, deve ser considerado com 1
 
 # def contador(inicio, fim, passo):
+
+print('Olá mundo')
