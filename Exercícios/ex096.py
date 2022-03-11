@@ -10,5 +10,4 @@ print('--- Controle de Terrenos ---')
 larg = float(input('\nLargura (m): '))
 comp = float(input('Comprimento (m): '))
 print()
-
 area(larg, comp)
