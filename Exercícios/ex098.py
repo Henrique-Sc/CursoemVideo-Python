@@ -8,4 +8,4 @@
 #            > Funcionar de trás para frente (90 até 40, de 10 em 10)
 #            > Se o passo for negativo ou zero, deve ser considerado com 1
 
-def contador(inicio, fim, passo):
+# def contador(inicio, fim, passo):
