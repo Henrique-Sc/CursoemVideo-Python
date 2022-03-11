@@ -5,3 +5,4 @@ def escreva(txt):
     print('-' * tam_txt)
 
 
+print()
