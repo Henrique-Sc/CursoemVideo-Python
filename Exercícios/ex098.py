@@ -10,4 +10,4 @@
 
 # def contador(inicio, fim, passo):
 
-print('Olá mundo')
+print('Olá mund')
