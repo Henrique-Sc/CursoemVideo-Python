@@ -1,7 +1,7 @@
 from time import sleep
 
 
-def maior(numeros):
+def maior(*numeros):
     # Linha bonita :)
     print('-=' * 17 + '-')
 
@@ -17,15 +17,21 @@ def maior(numeros):
     # Mostrar os números inseridos
     print(f'\n  -> ', end='')
     print(*numeros, sep=' - ')
-
     sleep(1)
-    print(numeros)
+    print('')
+
+    # Análise dos dados
     if len(numeros) == 1:
         print(f'• Foi informado apenas {len(numeros)} número.')
     else:
         print(f'• Foram informados {len(numeros)} números.')
     sleep(0.5)
     print(f'• O maior número é o {max(numeros)}')
+    sleep(0.5)
+
+    # Linha bonita :)
+    print('-=' * 17 + '-')
+    sleep(0.5)
 
 
 lista = list()
@@ -45,4 +51,6 @@ while True:
     else:
         pass
     lista.append(float(input('Digite outro número: ').strip()))
-maior(lista)
+maior(*lista)
+
+print('<- Fim da execução :) ->')
