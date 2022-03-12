@@ -1,28 +1,45 @@
-# Fazer um contador
-
-# Funcionalidades necessárias:
-#   > Mostrar uma contagem de 1 até 10 de 1 em 1
-#   > Mostrar uma contagem de 10 até 0 de 2 em 2
-#   > Mostrar uma contagem personalizada, escolhida pelo usuário
-#       • Funções necessárias:
-#            > Funcionar de trás para frente (90 até 40, de 10 em 10)
-#            > Se o passo for zero, deve ser considerado com 1
-#            > Se o passo for negativo, deve ser considerado como positivo
+from time import sleep
 
 # Determinando a função
+
 def contador(inicio, fim, passo):
+    # Verificação dos dados, para trata-lo corretamente
+    if passo == 0:
+        passo = 1
+    elif passo < 0:
+        passo *= -1
+
+    # Exibição dos dados
+    # Linha bonita :)
+    print('-' * 50)
+    sleep(0.3)
+    print(f'Contagem de {inicio} até {fim} de {passo} em {passo}!')
+    sleep(0.3)
+
     # Verificação dos dados, para trata-lo corretamente
     if fim > inicio:
         fim += 1
-
     elif inicio > fim:
         passo *= -1
         fim -= 1
 
+    print('   -> ', end='')
     for c in range(inicio, fim, passo):
-        print(f'{c} → ', end='')
-    print('')
+        print(f'{c}', end=' ')
+        sleep(0.21)
+    print('FIM!')
+    sleep(0.3)
+    # Linha bonita :)
+    print('-' * 50)
+    sleep(0.3)
 
 
 contador(1, 10, 1)
-contador(100, 0, 20)
+contador(10, 0, 2)
+
+print('\n' + '-' * 50)
+print('Agora é a sua vez de fazer uma contagem personalizada :)')
+inicio = int(input('Início: '))
+fim = int(input('Fim: '))
+passo = int(input('Passo: '))
+contador(inicio, fim, passo)
