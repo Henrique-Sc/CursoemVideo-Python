@@ -1,19 +1,25 @@
 from time import sleep
 
 
-def maior(*numeros):
+def maior(numeros):
+    # Linha bonita :)
     print('-=' * 17 + '-')
-    sleep(0.5)
-    print('Analisando os valores inseridos', end='')
-    for c in '...':
-        sleep(0.5)
-        print(c, end='')
+
     sleep(0.5)
 
+    # Print com pontinhos sendo exibidos a cada 0.5 segundos
+    print('Analisando os valores inseridos', end='')
+    for p in '...':
+        sleep(0.5)
+        print(p, end='')
+    sleep(0.5)
+
+    # Mostrar os números inseridos
     print(f'\n  -> ', end='')
     print(*numeros, sep=' - ')
-    sleep(1)
 
+    sleep(1)
+    print(numeros)
     if len(numeros) == 1:
         print(f'• Foi informado apenas {len(numeros)} número.')
     else:
@@ -39,3 +45,4 @@ while True:
     else:
         pass
     lista.append(float(input('Digite outro número: ').strip()))
+maior(lista)
