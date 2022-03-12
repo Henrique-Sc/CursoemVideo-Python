@@ -9,13 +9,15 @@
 #            > Se o passo for zero, deve ser considerado com 1
 #            > Se o passo for negativo, deve ser considerado como positivo
 
+# Determinando a função
 def contador(inicio, fim, passo):
+    # Verificação dos dados, para trata-lo corretamente
     if fim > inicio:
         fim += 1
+
     elif inicio > fim:
         passo *= -1
         fim -= 1
-        print(passo)
 
     for c in range(inicio, fim, passo):
         print(f'{c} → ', end='')
@@ -23,4 +25,4 @@ def contador(inicio, fim, passo):
 
 
 contador(1, 10, 1)
-contador(10, 0, 2)
+contador(100, 0, 20)
