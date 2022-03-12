@@ -9,9 +9,9 @@ def maior(*numeros):
 
     # Print com pontinhos sendo exibidos a cada 0.5 segundos
     print('Analisando os valores inseridos', end='')
-    for p in '...':
-        sleep(0.5)
-        print(p, end='')
+    for _ in range(3):
+        sleep(0.1)
+        print('.', end='', flush=True)
     sleep(0.5)
 
     # Mostrar os números inseridos
