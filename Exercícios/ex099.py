@@ -34,9 +34,26 @@ def maior(*numeros):
     sleep(0.5)
 
 
-lista = list()
-lista.append(float(input('Digite o primeiro número: ').strip()))
 while True:
+    lista = list()
+    lista.append(float(input('Digite o primeiro número: ').strip()))
+    while True:
+        esc = str(input('Deseja continuar? [Sim / Não] ')).strip().upper()[0]
+        c = 0
+        print()
+        while esc not in 'SN':
+            esc = str(input(f'Valor inválido! Digite "Sim" ou "Não": ')).strip().upper()[0]
+            c += 1
+        if c != 0:
+            print()
+
+        if esc == 'N':
+            break
+        else:
+            pass
+        lista.append(float(input('Digite outro número: ').strip()))
+    maior(*lista)
+
     esc = str(input('Deseja continuar? [Sim / Não] ')).strip().upper()[0]
     c = 0
     print()
@@ -50,7 +67,4 @@ while True:
         break
     else:
         pass
-    lista.append(float(input('Digite outro número: ').strip()))
-maior(*lista)
-
 print('<- Fim da execução :) ->')
