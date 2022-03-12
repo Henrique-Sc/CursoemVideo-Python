@@ -34,6 +34,7 @@ def maior(*numeros):
     sleep(0.5)
 
 
+
 lista = list()
 lista.append(float(input('Digite o primeiro número: ').strip()))
 while True:
