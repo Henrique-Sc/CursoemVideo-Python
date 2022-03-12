@@ -3,7 +3,7 @@ from time import sleep
 
 def maior(*numeros):
     # Linha bonita :)
-    print('-=' * 17 + '-')
+    print('-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
 
     sleep(0.5)
 
@@ -54,7 +54,7 @@ while True:
         lista.append(float(input('Digite outro número: ').strip()))
     maior(*lista)
 
-    esc = str(input('Deseja continuar? [Sim / Não] ')).strip().upper()[0]
+    esc = str(input('\nDeseja continuar? [Sim / Não] ')).strip().upper()[0]
     c = 0
     print()
     while esc not in 'SN':
@@ -63,8 +63,14 @@ while True:
     if c != 0:
         print()
 
+    sleep(0.5)
+    print('-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
     if esc == 'N':
         break
     else:
         pass
-print('<- Fim da execução :) ->')
+    
+sleep(0.5)
+print('Obrigado por testar! <3')
+sleep(0.5)
+print('<- Fim da execução ->')
