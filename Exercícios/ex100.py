@@ -2,10 +2,18 @@ from random import randint
 
 
 def sorteia():
-    numeros = list()
+    numeros = []
     for c in range(5):
         numeros.append(randint(1, 10))
-    print(numeros)
+    print(f'Os valores')
+    return numeros
 
 
-sorteia()
+def somarPar(numeros):
+    tot_par = 0
+    for num in numeros:
+        if num % 2 == 0:
+            tot_par += num
+    print(tot_par)
+
+
