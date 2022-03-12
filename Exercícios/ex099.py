@@ -9,5 +9,4 @@ def maior(*numeros):
         print(c, end='')
     print(c for '...')
 
-
 maior(1)
