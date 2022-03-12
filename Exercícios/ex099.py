@@ -65,12 +65,14 @@ while True:
 
     sleep(0.5)
     print('-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
+    sleep(0.5)
+
     if esc == 'N':
         break
     else:
         pass
-    
-sleep(0.5)
-print('Obrigado por testar! <3')
+
+print('\nObrigado por testar! <3')
 sleep(0.5)
 print('<- Fim da execução ->')
+sleep(0.5)
