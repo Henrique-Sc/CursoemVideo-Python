@@ -1,4 +1,4 @@
-def título(txt):
+def titulo(txt):
     print('------------------------------')
     print(f'{txt:^30}')
     print('------------------------------\n')
@@ -9,9 +9,8 @@ def sep():
     print('==============================\n')
 
 
-título('CURSO EM VÍDEO')
+titulo('CURSO EM VÍDEO')
 
-título('Henrique da Silva Costa')
+titulo('Henrique da Silva Costa')
 
-título('Textinho feliz :)')
-
+titulo('Textinho feliz :)')
