@@ -6,5 +6,6 @@ def escreva(txt):
 
 
 escreva('Olá mundo')
-escreva('Henrique da SIlva Costa')
+escreva('Henrique da Silva Costa')
 escreva('python')
+
