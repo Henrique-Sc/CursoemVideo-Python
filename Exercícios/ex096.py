@@ -7,7 +7,7 @@ def area(larg, comp):
 print('--- Controle de Terrenos ---')
 
 # Inserção dos dados
-larg = float(input('\nLargura (m): '))
-comp = float(input('Comprimento (m): '))
+largura = float(input('\nLargura (m): '))
+comprimento = float(input('Comprimento (m): '))
 print()
-area(larg, comp)
+area(largura, comprimento)
