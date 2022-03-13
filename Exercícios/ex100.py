@@ -9,7 +9,7 @@ def sorteio(nums, tot_sort=5):
         r = randint(1, 10)
         nums.append(r)
         print(r, end=' ', sep=f'{sleep(0.5)}')
-    print()
+    print('PRONTO!')
 
 
 def somarPar(nums):
