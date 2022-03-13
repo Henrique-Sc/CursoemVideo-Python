@@ -38,12 +38,14 @@ while True:
     lista = list()
     lista.append(float(input('Digite o primeiro número: ').strip()))
     while True:
-        esc = str(input('Deseja continuar? [Sim / Não] ')).strip().upper()[0]
         c = 0
         print()
+
+        esc = str(input('Deseja continuar? [Sim / Não] ')).strip().upper()[0]
         while esc not in 'SN':
             esc = str(input(f'Valor inválido! Digite "Sim" ou "Não": ')).strip().upper()[0]
             c += 1
+
         if c != 0:
             print()
 
