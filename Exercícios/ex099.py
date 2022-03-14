@@ -7,7 +7,7 @@ def maior(*numeros):
 
     sleep(0.5)
 
-    # Print com pontinhos sendo exibidos a cada 0.5 segundos
+    # Print com pontinhos sendo exibidos a cada 0.25 segundos
     print('Analisando os valores inseridos', end='')
     for _ in range(3):
         sleep(0.25)
