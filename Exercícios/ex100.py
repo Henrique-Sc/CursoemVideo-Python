@@ -2,7 +2,7 @@ from random import randint
 from time import sleep
 
 
-def sorteio(lista, tot_sort=5, timer=0.5):
+def sorteio(lista, tot_sort=5, timer=0.22):
     print(f'Sorteando {tot_sort} números: ', end='')
 
     for c in range(tot_sort):
@@ -21,5 +21,5 @@ def somarPar(lista):
 
 
 numeros = list()
-sorteio(numeros, tot_sort=5, timer=0.22)
+sorteio(numeros)
 somarPar(numeros)
