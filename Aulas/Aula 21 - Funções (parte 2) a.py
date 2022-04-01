@@ -6,6 +6,7 @@ help(input)
 def contador1(i, f, p):
     """
     -> Faz uma contagem e mostra na tela.
+
     :param i: Início da contagem
     :param f: Final da contagem
     :param p: Passo da contagem
@@ -18,3 +19,4 @@ def contador1(i, f, p):
 
 
 contador1(1, 10, 1)
+print(contador1.__doc__)
