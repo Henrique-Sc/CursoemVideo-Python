@@ -10,3 +10,4 @@ def leiaInt(txt=''):
 # Programa principal
 n = leiaInt('Digite um número: ')
 print(f'O número digitado foi {n}')
+
