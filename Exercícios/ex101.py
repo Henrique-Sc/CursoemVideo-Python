@@ -6,7 +6,7 @@ anoAtual = datetime.now().year
 def voto(nascimento):
     idade = anoAtual - nascimento
 
-    if idade < 16:
+    if idade < 16 or idade > 60:
         result = 'VOTO NEGADO'
     elif 16 <= idade < 18:
         result = 'VOTO OPCIONAL'
