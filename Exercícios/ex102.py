@@ -21,7 +21,8 @@ def fatorial(n=1, show=False):
 
 
 # Programa principal
-num = int(input('Digite um número para ver o seu fatorial: ').strip())
+print('-' * 25)
+num = int(input('Digite um número: ').strip())
 while True:
     esc = input('Deseja visualizar a conta? [Sim / Não]: ').strip().upper()[0]
     if esc not in 'SN':
