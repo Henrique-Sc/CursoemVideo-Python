@@ -1,8 +1,13 @@
 def fatorial(num=1):
+    """
+    Retorna o fatorial do valor informado
+    :param num: Número que se deseja saber o fatorial
+    :return: Retorna o fatorial
+    """
     f = 1
     for c in range(1, num + 1):
         f *= c
-        print(c, f)
+    return f
 
 
-fatorial(5)
+print(fatorial(5))
