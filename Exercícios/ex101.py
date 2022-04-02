@@ -1,9 +1,7 @@
-from datetime import datetime
-
-anoAtual = datetime.now().year
-
-
 def voto(nascimento):
+    from datetime import datetime
+
+    anoAtual = datetime.now().year
     idade = anoAtual - nascimento
 
     if idade < 16 or idade > 60:
