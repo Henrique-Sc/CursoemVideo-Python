@@ -10,4 +10,8 @@ def fatorial(num=1):
     return f
 
 
-print(fatorial(5))
+n = int(input('Digite um número para ver o seu fatorial: ').strip())
+f = fatorial(n)
+
+print(f'Fatorial de {n}:')
+print(f'  -> {f}')
