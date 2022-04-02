@@ -1,4 +1,11 @@
 def notas(*n, sit=False):
+    """
+    -> Analise notas de diversos alunos
+    :param n: nota do aluno (uma ou mais notas)
+    :param sit: valor opcional, indicando se deve ou não adicionar a situação
+    :return: dicionário com várias informações sobre a situação da turma
+    """
+
     dic = {
         'Total de notas': len(n),
         'Maior nota': max(n),
