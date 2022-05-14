@@ -1,3 +1,5 @@
+from time import sleep
+
 cores = ('\033[m',          # 0 - sem cor
          '\033[38;5;9m',    # 1 - vermelho
          '\033[38;5;10m',   # 2 - verde
@@ -20,7 +22,6 @@ def ajuda(comando):
     help(comando)
 
 
-
 while True:
     title('SISTEMA DE AJUDA PyHelp', cor=4)
     print(f'\033[3m~Digite fim para parar \033[m')
@@ -31,6 +32,8 @@ while True:
     if func == 'fim':
         break
     else:
+        sleep(0.5)
+        
         ajuda(func)
 
 title('ATÉ LOGO!', cor=6)
