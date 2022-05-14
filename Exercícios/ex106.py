@@ -32,8 +32,8 @@ while True:
     if func == 'fim':
         break
     else:
-        sleep(0.5)
-        
+        title(f'Carregando manual do comando "{func}"', cor=3)
+        sleep(1)
         ajuda(func)
 
 title('ATÉ LOGO!', cor=6)
