@@ -19,4 +19,3 @@ def contador1(i, f, p):
 
 
 contador1(1, 10, 1)
-print(contador1.__doc__)
