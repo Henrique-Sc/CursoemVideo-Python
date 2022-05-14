@@ -25,9 +25,5 @@ def notas(*n, sit=False):
 
 
 # Programa principal
-resultado = notas(8, 7, 5, 9.85)
-for i, d in enumerate(resultado.items()):
-    if i >= 1 and d[0] != 'Situação':
-        print(f'{d[0]}: {d[1]:.2f}')
-    else:
-        print(f'{d[0]}: {d[1]:}')
+resultado = notas(10, 5, 7.5, 8.25, sit=True)
+print(resultado)
