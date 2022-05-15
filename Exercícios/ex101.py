@@ -14,6 +14,7 @@ def voto(nascimento):
     return f'Com {idade} anos: {result}'
 
 
+# Programa principal
 print('-' * 30)
 nasc = int(input(f'Ano de nascimento (aaaa): '))
 print(voto(nasc))
