@@ -1,3 +1,4 @@
+# Programa secundário
 def voto(nascimento):
     from datetime import datetime
 
