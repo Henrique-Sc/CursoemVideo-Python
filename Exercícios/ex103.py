@@ -1,16 +1,12 @@
-def jogador(nome='<desconhecido>', totgols=0):
-    print(f'O jogador {nome} fez {totgols} gol(s)')
+def jogador(nome='<desconhecido>', gols=0):
+    print(f'O jogador {nome} fez {gols} gol(s)')
 
 
-n = input('Nome do jogador: ').strip().title()
-gols = input('Número de gols: ').strip()
-print()
-if gols.isnumeric():
-    int(gols)
-else:
-    gols = 0
+name = str(input('Digite o nome do jogador: ')).strip().title()
+g = input('Total de gols: ')
 
-if n != '':
-    jogador(n, gols)
-else:
-    jogador(totgols=gols)
+if g.isnumeric():
+    int(g)
+
+# if name == '':
+
