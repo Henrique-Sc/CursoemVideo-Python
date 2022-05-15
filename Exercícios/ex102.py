@@ -3,21 +3,25 @@ def fatorial(n=1, show=False):
     """
     -> Calcula o Fatorial de um número.
     :param n: Número que deseja-se saber o seu fatorial
-    :param show: Retornar ou não a conta (opcional)
+    :param show: Exibe ou não a conta (opcional)
     :return: Retorna o Fatorial
     """
 
     f = 1
-    result = ''
     for c in range(1, n + 1):
-        result += f'{c} ' + ('x ' if c < n else '= ')
         f *= c
-    result += f'{f}'
 
-    if not show:
-        return f
-    else:
-        return result
+        if show:  # show == True
+            print(c, end='')
+            if c < n:
+                print(' x ', end='')
+            else:
+                print(' = ', end='')
+
+            if c == n:
+                print(f)
+
+    return f
 
 
 # Programa principal
