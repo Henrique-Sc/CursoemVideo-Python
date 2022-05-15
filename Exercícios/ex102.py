@@ -17,7 +17,6 @@ def fatorial(n=1, show=False):
                 print(' x ', end='')
             else:
                 print(' = ', end='')
-
             if c == n:
                 print(f)
 
