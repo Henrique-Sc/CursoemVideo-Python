@@ -6,7 +6,7 @@ cores = ('\033[m',          # 0 - sem cor
          '\033[38;5;11m',   # 3 - amarelo
          '\033[38;5;12m',   # 4 - azul
          '\033[38;5;13m',   # 5 - magenta
-         '\033[38;5;14m',)  # 6 - ciano
+         '\033[38;5;14m')   # 6 - ciano
 
 
 def title(txt, cor=0):
@@ -24,16 +24,19 @@ def ajuda(comando):
 
 while True:
     title('SISTEMA DE AJUDA PyHelp', cor=4)
+    sleep(1)
+
     print(f'\033[3m~Digite fim para parar \033[m')
     func = str(input(f'{cores[1]}Função ou biblioteca > {cores[0]}')).lower()
 
-    print()
+    print()  # Print vazio para quebrar linha
 
     if func == 'fim':
         break
     else:
-        title(f'Carregando manual do comando "{func}"', cor=3)
+        title(f'Carregando manual do comando "{func}"', cor=4)
         sleep(1)
         ajuda(func)
+        sleep(1)
 
 title('ATÉ LOGO!', cor=6)
