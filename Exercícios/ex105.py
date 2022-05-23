@@ -12,15 +12,16 @@ def notas(*n, sit=False):
         'Menor nota': min(n),
         'Média': sum(n) / len(n)
     }
+
+    # Se o parâmetro sit for True, o dicionário receberá a situação.
     if sit:
-        media = dic['Média']
-        if media < 5:
-            s = 'RUIM'
-        elif 5 <= media < 7:
-            s = 'RAZOÁVEL'
+        if dic['Média'] >= 7:
+            dic['Situação'] = 'BOA'
+        elif dic['Média'] >= 5:
+            dic['Situação'] = 'RAZOÁVEL'
         else:
-            s = 'BOA'
-        dic['Situação'] = s
+            dic['Situação'] = 'RUIM'
+
     return dic
 
 
