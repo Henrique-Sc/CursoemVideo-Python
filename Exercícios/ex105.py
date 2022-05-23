@@ -1,9 +1,9 @@
 def notas(*n, sit=False):
     """
-    -> Analise notas de diversos alunos
-    :param n: nota do aluno (uma ou mais notas)
+    -> Função para analisar notas e situações de diversos alunos.
+    :param n: nota do alunos (uma ou mais notas)
     :param sit: valor opcional, indicando se deve ou não adicionar a situação
-    :return: dicionário com várias informações sobre a situação da turma
+    :return: Retorna u  dicionário com a análise das notas do aluno e a situação (se sit for True)
     """
 
     dic = {
@@ -25,5 +25,5 @@ def notas(*n, sit=False):
 
 
 # Programa principal
-resultado = notas(10, 5, 7.5, sit=True)
+resultado = notas(10, 4.58, 5, 8.5, sit=True)
 print(resultado)
