@@ -41,6 +41,7 @@ def resumo(n, aum, red):
     print(linha)
     print(f'{"RESUMO DO VALOR":^32}')
     print(linha)
+    print(f' {"Preço analisado"} \t{moeda(n)}')
     print(f' {"Dobro do valor"} \t{dobro(n, formatar=True)}')
     print(f' {"Metade do valor"} \t{metade(n, formatar=True)}')
     print(f' {aum}% de aumento \t{aumentar(n, aum, formatar=True)}')
