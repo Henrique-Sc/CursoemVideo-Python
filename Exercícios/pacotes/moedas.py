@@ -1,6 +1,3 @@
-from builtins import print
-
-
 def aumentar(n, x):
     new_n = n / 100 * x
     return n + new_n
@@ -17,4 +14,3 @@ def dobro(n):
 
 def metade(n):
     return n / 2
-
