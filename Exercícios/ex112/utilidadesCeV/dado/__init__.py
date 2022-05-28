@@ -4,6 +4,7 @@ def leiaDinheiro(txt):
     :param txt: Texto que vai ser visualizado pelo usuário, para que ele posssa digitar
     :return: retorna o valor que o usuário digitar
     """
+
     while True:
         # Receber uma string, excluindo os espaços, e se tiver vírgula, troca para pontos
         dinheiro = input(txt).strip().replace(',', '.')
