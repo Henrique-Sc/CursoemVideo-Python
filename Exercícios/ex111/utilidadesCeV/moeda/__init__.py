@@ -46,3 +46,4 @@ def resumo(n, aum, red):
     print(f' {"Metade do valor"} \t{metade(n, formatar=True)}')
     print(f' {aum}% de aumento \t{aumentar(n, aum, formatar=True)}')
     print(f' {red}% de redução \t{diminuir(n, red, formatar=True)}')
+    print(linha)
