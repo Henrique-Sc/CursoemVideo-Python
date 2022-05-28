@@ -5,6 +5,7 @@ def moeda(n):
     :param n:  Número a ser analisado
     :return:   Retorna o valor formatado
     """
+
     n_format = f'R$ {n:,.2f}'.replace(',', '_').replace('.', ',').replace('_', '.')
     return n_format
 
@@ -18,6 +19,7 @@ def aumentar(n, x, formatar=False):
     :param formatar:  parâmetro opcional, se True ele retorna o valor formatado como monetário
     :return:          retorna o valor
     """
+
     new_n = n + (n / 100 * x)
 
     if formatar:
@@ -34,6 +36,7 @@ def diminuir(n, x, formatar=False):
     :param formatar:  parâmetro opcional, se True ele retorna o valor formatado como monetário
     :return:          retorna o valor
     """
+
     new_n = n - (n / 100 * x)
 
     if formatar:
@@ -49,6 +52,7 @@ def dobro(n, formatar=False):
     :param formatar:  parâmetro opcional. Se True, retorna o valor formatado como monetário
     :return:          retorna o dobro do valor inserido
     """
+
     new_n = n * 2
 
     if formatar:
@@ -64,6 +68,7 @@ def metade(n, formatar=False):
     :param formatar:  parâmetro opcional. Se True, retorna o valor formatado como monetário
     :return:          retorna a metade do valor inserido
     """
+
     new_n = n / 2
 
     if formatar:
@@ -80,6 +85,7 @@ def resumo(n, aum, red):
     :param red:  porcentagem da redução
     :return:     sem retorno.
     """
+
     linha = '=' * 32
 
     print(linha)
