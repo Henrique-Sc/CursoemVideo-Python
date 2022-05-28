@@ -4,5 +4,5 @@ from utilidadesCeV import dado
 
 
 # Usar as funções aumentar, diminuir, dobro e metade
-p = dado.leiaDinheiro('15')
+p = dado.leiaDinheiro('Digite o preço do produto: R$')
 moeda.resumo(p, 80, 35)
