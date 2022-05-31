@@ -1,5 +1,5 @@
 def moeda(n):
-    n_format = f'R${n:,.2f}'.replace('.', ',')
+    n_format = f'R$ {n:,.2f}'.replace(',', '_').replace('.', ',').replace('_', '.')
     return n_format
 
 
