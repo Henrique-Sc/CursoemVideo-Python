@@ -1,4 +1,4 @@
-def moeda(n):
+def moeda(n, moeda='R$'):
     """
     -> Formata o valor recebido como monetário
 
@@ -6,7 +6,7 @@ def moeda(n):
     :return:   Retorna o valor formatado
     """
 
-    n_format = f'R$ {n:,.2f}'.replace(',', '_').replace('.', ',').replace('_', '.')
+    n_format = f'{moeda} {n:,.2f}'.replace(',', '_').replace('.', ',').replace('_', '.')
     return n_format
 
 
