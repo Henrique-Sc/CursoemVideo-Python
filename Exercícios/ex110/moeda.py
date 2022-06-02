@@ -35,7 +35,7 @@ def metade(n, formatar=False):
     return new_n
 
 
-def resumo(n, aum, red):
+def resumo(n=100, aum=10, red=15):
     linha = '=' * 32
 
     print(linha)
