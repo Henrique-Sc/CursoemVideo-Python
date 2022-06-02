@@ -1,6 +1,6 @@
 # Importar o módulo moeda.py
-import moedas
+import moeda
 
 # Usar as funções aumentar, diminuir, dobro e metade
 p = float(input('Digite o preço: R$'))
-moedas.resumo(p, 80, 35)
+moeda.resumo(p, 80, 35)
