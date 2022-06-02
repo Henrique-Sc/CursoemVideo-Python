@@ -76,7 +76,7 @@ def metade(n, formatar=False):
     return new_n
 
 
-def resumo(n, aum, red):
+def resumo(n=100, aum=10, red=15):
     """
     -> Mostra para o usuário uma tabulação, com todos os cálculos do módulo. Dobro, metade, aumento e redução.
 
