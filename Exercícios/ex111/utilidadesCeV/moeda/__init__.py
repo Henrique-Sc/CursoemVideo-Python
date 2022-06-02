@@ -2,6 +2,7 @@ def moeda(n, moeda='R$'):
     n_format = f'{moeda} {n:,.2f}'.replace(',', '_').replace('.', ',').replace('_', '.')
     return n_format
 
+
 def aumentar(n, x, formatar=False):
     new_n = n + (n / 100 * x)
 
@@ -34,7 +35,7 @@ def metade(n, formatar=False):
     return new_n
 
 
-def resumo(n, aum, red):
+def resumo(n=100, aum=10, red=15):
     linha = '=' * 32
 
     print(linha)
