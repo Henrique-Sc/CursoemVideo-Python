@@ -33,4 +33,3 @@ def leiaFloat(txt):
 
         else:
             return a
-
