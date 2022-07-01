@@ -1,7 +1,7 @@
 IRed = '\033[38;5;9m'
 reset = '\033[m'
 
-txtKeyboardError = f'{IRed}Erro! Você interrompeu o programa.{reset}'
+txtKeyboardError = f'{IRed}Erro! Você preferiu não digitar esse número.{reset}'
 txtError = f'{IRed}Erro! Digite um número inteiro válido.{reset}'
 
 
@@ -15,6 +15,8 @@ def leiaInt(txt):
 
         except:
             print(txtError)
+            a = 0
+            return a
 
         else:
             return a
@@ -27,6 +29,8 @@ def leiaFloat(txt):
 
         except KeyboardInterrupt:
             print(txtKeyboardError)
+            a = 0
+            return a
 
         except:
             print(txtError)
