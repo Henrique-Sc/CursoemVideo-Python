@@ -84,11 +84,9 @@ def opcoes(esc):
         # Cadastrar
         if esc == 1:
             cadastrar()
-
         # Listar
         elif esc == 2:
             listar()
-
         # Sair
         elif esc == 3:
             sair()
@@ -101,3 +99,12 @@ def cadastrar():
     idade = leiaIdade('Digite a sua idade: ')
     with open('cadastros.txt', 'a') as arquivo:
         arquivo.write(f'{nome}\n{idade}\n')
+
+
+def listar():
+    title('PESSOAS CADASTRADAS', colorSimb=3)
+
+    with open('cadastros.txt', 'r') as arquivo:
+        cadastros = arquivo.read()
+
+    print(cadastros)
