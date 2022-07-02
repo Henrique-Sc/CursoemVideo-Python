@@ -3,3 +3,4 @@ import functions
 
 esc = functions.menu()
 functions.opcoes(esc)
+# functions.listar()
