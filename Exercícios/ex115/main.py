@@ -1,4 +1,5 @@
 from time import sleep as s
 import functions
 
-functions.menu()
+esc = functions.menu()
+functions.opcoes(esc)
