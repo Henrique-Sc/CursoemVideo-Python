@@ -9,15 +9,12 @@ def leiaInt(txt):
     while True:
         try:
             a = int(input(txt))
-
         except KeyboardInterrupt:
-            print(f'{IRed}Erro! Você interrompeu o programa.{reset}')
-
+            print(txtKeyboardError)
         except:
             print(txtError)
             a = 0
             return a
-
         else:
             return a
 
@@ -26,14 +23,11 @@ def leiaFloat(txt):
     while True:
         try:
             a = float(input(txt))
-
         except KeyboardInterrupt:
             print(txtKeyboardError)
             a = 0
             return a
-
         except:
             print(txtError)
-
         else:
             return a
