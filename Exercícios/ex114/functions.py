@@ -1,7 +1,7 @@
 from selenium import webdriver
 
 red = '\033[31m'
-yellow = '\033[33m'
+blue = '\033[34m'
 reset = '\033[34m'
 
 
@@ -10,6 +10,8 @@ def conectarSite(site):
     try:
         navegador.get(site)
     except:
-        print(f'{red}Não consegui conectar no site \'{site}\'!{reset}')
+        title = navegador.title
+        print(f'{red}O site {title} não está acessível no momento.{reset}')
     else:
-        print(f'{yellow}Eu consegui conectar no site \'{site}\'!{reset}')
+        title = navegador.title
+        print(f'{blue}O site {title} está acessível no momento.{reset}')
