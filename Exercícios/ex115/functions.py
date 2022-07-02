@@ -33,6 +33,18 @@ def erro():
     sleep(1)
 
 
+def leiaIdade(txt):
+    while True:
+        try:
+            a = int(input(txt).strip())
+        except:
+            print()
+            title('Erro! Digite a sua idade corretamente.', colorSimb=1, colorTitle=1, line=False)
+            print()
+        else:
+            return a
+
+
 def menu():
     while True:
         title('CADASTRO DE USUÁRIO', colorSimb=3)
@@ -69,16 +81,23 @@ def opcoes(esc):
             arquivo.write('')
 
     finally:
-        # Verificar a escolha (cadastrar ou listar)
+        # Cadastrar
         if esc == 1:
-            with open('cadastros.txt', 'a') as arquivo:
-                arquivo.write('a')
-
-        # Cadatrar
+            cadastrar()
 
         # Listar
+        elif esc == 2:
+            listar()
+
+        # Sair
+        elif esc == 3:
+            sair()
         sleep(1)
 
 
 def cadastrar():
-    nome = str(input('Digite o seu nome: '))
+    linha(colorSimb=3)
+    nome = str(input('Digite o seu nome: ')).strip().title()
+    idade = leiaIdade('Digite a sua idade: ')
+    with open('cadastros.txt', 'a') as arquivo:
+        arquivo.write(f'{nome}\n{idade}\n')
