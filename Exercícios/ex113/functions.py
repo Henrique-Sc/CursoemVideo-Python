@@ -11,10 +11,10 @@ def leiaInt(txt):
             a = int(input(txt))
         except KeyboardInterrupt:
             print(txtKeyboardError)
-        except:
-            print(txtError)
             a = 0
             return a
+        except:
+            print(txtError)
         else:
             return a
 
