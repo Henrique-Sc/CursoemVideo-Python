@@ -1,6 +1,8 @@
 from time import sleep as s
 import functions
 
-esc = functions.menu()
-functions.opcoes(esc)
-# functions.listar()
+while True:
+    esc = functions.menu()
+    functions.opcoes(esc)
+    if esc == 3:
+        break
