@@ -26,23 +26,30 @@ def title(txt, simb='=', colorTitle=0, colorSimb=0, tmn=30, line=True):
         linha(tmn, simb, colorSimb)
 
 
-def erro():
+def erroMenu():
     print()
     title('Erro! Digite as opções corretamente.', colorSimb=1, colorTitle=1, line=False)
     print()
     sleep(1)
 
 
+def erroIdade():
+    print()
+    title('Erro! Digite a sua idade corretamente.', colorSimb=1, colorTitle=1, line=False)
+    print()
+
+
 def leiaIdade(txt):
     while True:
         try:
-            a = int(input(txt).strip())
+            idade = int(input(txt).strip())
         except:
-            print()
-            title('Erro! Digite a sua idade corretamente.', colorSimb=1, colorTitle=1, line=False)
-            print()
+            erroIdade()
         else:
-            return a
+            if idade < 0:
+                erroIdade()
+            else:
+                return idade
 
 
 def menu():
@@ -60,11 +67,11 @@ def menu():
             esc = int(input('O que deseja fazer? '))
 
         except:
-            erro()
+            erroMenu()
 
         else:
             if str(esc) not in '123':
-                erro()
+                erroMenu()
             else:
                 sleep(1)
                 return esc
@@ -95,11 +102,11 @@ def opcoes(esc):
 
 def cadastrar():
     linha(colorSimb=3)
-    nome = str(input('Digite o seu nome: ')).strip().title()
+    nome = str(input('Digite o seu nome: ')).lstrip().title()[:18].rstrip()
     idade = leiaIdade('Digite a sua idade: ')
     with open('cadastros.txt', 'a') as arquivo:
         arquivo.write(f'{nome}\n{idade}\n')
-    sleep()
+    sleep(1)
     print(f'\nCadastro de {nome} realizado com sucesso!')
     sleep(1)
 
@@ -111,6 +118,9 @@ def listar():
         cadastros = arquivo.readlines()
 
     cad = []
+    if len(cadastros) == 0:
+        print(f'{cores[1]}{"Nenhum cadastro encontrado!":^30}{cores[0]}')
+
     for c, p in enumerate(cadastros):
         if c % 2 == 0:
             pessoas = {
@@ -119,6 +129,13 @@ def listar():
             }
             cad.append(pessoas)
             del pessoas
+
+    for c in cad:
+        if int(c["idade"]) <= 1:
+            print(f' {c["nome"]:<20} {c["idade"]} ano')
+        else:
+            print(f' {c["nome"]:<20} {c["idade"]} anos')
+    sleep(1)
 
 
 def sair():
