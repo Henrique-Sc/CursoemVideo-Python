@@ -99,12 +99,29 @@ def cadastrar():
     idade = leiaIdade('Digite a sua idade: ')
     with open('cadastros.txt', 'a') as arquivo:
         arquivo.write(f'{nome}\n{idade}\n')
+    sleep()
+    print(f'\nCadastro de {nome} realizado com sucesso!')
+    sleep(1)
 
 
 def listar():
     title('PESSOAS CADASTRADAS', colorSimb=3)
 
     with open('cadastros.txt', 'r') as arquivo:
-        cadastros = arquivo.read()
+        cadastros = arquivo.readlines()
 
-    print(cadastros)
+    cad = []
+    for c, p in enumerate(cadastros):
+        if c % 2 == 0:
+            pessoas = {
+                'nome': cadastros[c].replace('\n', ''),
+                'idade': cadastros[c + 1].replace('\n', '')
+            }
+            cad.append(pessoas)
+            del pessoas
+
+
+def sair():
+    title('Saindo do programa...', colorSimb=3)
+    sleep(1)
+    print(f'{cores[4]}{"-> Volte sempre! <-":^30}{cores[0]}')
