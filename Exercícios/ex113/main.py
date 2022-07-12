@@ -1,6 +1,9 @@
 from functions import leiaInt, leiaFloat
 
-a = leiaInt('Digite um número inteiro: ')
-b = leiaFloat('Digite um número real: ')
+bold = '\033[1m'
+reset = '\033[m'
 
-print(f'\nVocê digitou o números {a} e {b}')
+a = leiaInt(f'Digite um número {bold}INTEIRO{reset}: ')
+b = leiaFloat(f'Digite um número {bold}REAL{reset}: ')
+
+print(f'\nVocê digitou o números {bold}{a}{reset} e {bold}{b}{reset}!')
