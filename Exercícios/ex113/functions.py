@@ -22,13 +22,13 @@ def leiaInt(txt):
 def leiaFloat(txt):
     while True:
         try:
-            a = float(input(txt).strip())
+            a = float(input(txt).strip().replace(',', '.'))
         except KeyboardInterrupt:
             print(txtKeyboardError)
             a = 0
             return a
         except:
-            print(f'{IRed}Erro! Digite um número decimal válido.{reset}')
+            print(f'{IRed}Erro! Digite um número real válido.{reset}')
             continue
         else:
             return a
