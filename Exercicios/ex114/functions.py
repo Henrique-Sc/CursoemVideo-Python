@@ -1,17 +1,28 @@
-from selenium import webdriver
+# from selenium import webdriver
+from urllib import request
 
 red = '\033[31m'
 blue = '\033[34m'
-reset = '\033[34m'
+reset = '\033[m'
 
 
 def conectarSite(site):
-    navegador = webdriver.Chrome()
+
+    # Minha solução:
+    # navegador = webdriver.Chrome()
+    # try:
+    #     navegador.get(site)
+    # except:
+    #     return False
+    # else:
+    #     return True
+
+    # Solução do Guanabara:
     try:
-        navegador.get(site)
+        request.urlopen(site)
     except:
-        title = navegador.title
-        print(f'{red}O site {title} não está acessível no momento.{reset}')
+        # print(f'{red}O site não está acessível no momento. {reset}')
+        return False
     else:
-        title = navegador.title
-        print(f'{blue}O site {title} está acessível no momento.{reset}')
+        # print(f'{blue}O site está acessível no momento. {reset}')
+        return True
