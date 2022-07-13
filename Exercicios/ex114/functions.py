@@ -19,7 +19,7 @@ def conectarSite(site):
 
     # Solução do Guanabara:
     try:
-        request.urlopen(site)
+        site = request.urlopen(site)
     except:
         # print(f'{red}O site não está acessível no momento. {reset}')
         return False
