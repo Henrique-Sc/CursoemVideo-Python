@@ -81,16 +81,30 @@ def opcoes(esc):
         sleep(1)
 
 
+def leiaNome(txt):
+    while True:
+        nome = str(input(txt)).strip().title()[:18].rstrip()
+        if nome == '' or len(nome) < 3:
+            print()
+            title('Erro! Digite o seu nome corretamente.', colorSimb=1, colorTitle=1, line=False)
+            print()
+            sleep(1)
+        else:
+            break
+    return nome
+
+
 def erroIdade():
     print()
     title('Erro! Digite a sua idade corretamente.', colorSimb=1, colorTitle=1, line=False)
     print()
+    sleep(1)
 
 
 def leiaIdade(txt):
     while True:
         try:
-            idade = int(input(txt).strip())
+            idade = int(input(txt).strip()[:3])
         except:
             erroIdade()
         else:
@@ -102,7 +116,7 @@ def leiaIdade(txt):
 
 def cadastrar():
     linha(colorSimb=3)
-    nome = str(input('Digite o seu nome: ')).lstrip().title()[:18].rstrip()
+    nome = leiaNome('Digite o seu nome: ')
     idade = leiaIdade('Digite a sua idade: ')
     with open('cadastros.txt', 'a') as arquivo:
         arquivo.write(f'{nome}\n{idade}\n')
