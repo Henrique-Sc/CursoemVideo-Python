@@ -61,11 +61,11 @@ def menu():
 def opcoes(esc):
     # Verificar se o arquivo .txt está criado
     try:
-        with open('cadastros.txt', 'r') as arquivo:
+        with open('cadastros.txt', 'rt', encoding='utf-8') as arquivo:
             arquivo.read()
 
     except FileNotFoundError:
-        with open('cadastros.txt', 'w+') as arquivo:
+        with open('cadastros.txt', 'wt+', encoding='utf-8'):
             pass
 
     finally:
@@ -118,8 +118,8 @@ def cadastrar():
     linha(colorSimb=3)
     nome = leiaNome('Digite o seu nome: ')
     idade = leiaIdade('Digite a sua idade: ')
-    with open('cadastros.txt', 'a', encoding='utf-8') as arquivo:
-        arquivo.write(f'{nome};{idade}\n')
+    with open('cadastros.txt', 'at', encoding='utf-8') as arquivo:
+        arquivo.write(f'{nome}; {idade}\n')
     sleep(1)
     print(f'\nCadastro de {nome} realizado com sucesso!')
     sleep(1)
@@ -128,15 +128,15 @@ def cadastrar():
 def listar():
     title('PESSOAS CADASTRADAS', colorSimb=3)
 
-    with open('cadastros.txt', 'r', encoding='utf-8') as arquivo:
+    with open('cadastros.txt', 'rt', encoding='utf-8') as arquivo:
         cadastros = arquivo.readlines()
 
     if len(cadastros) == 0:
         print(f'{cores[1]}{"Nenhum cadastro encontrado!":^30}{cores[0]}')
     else:
         for cadastro in cadastros:
-            cadastro = cadastro.replace('\n', '').split(';')
-            print(f' {cadastro[0]:<19} {cadastro[1]}', 'ano' if int(cadastro[1]) <= 1 else 'anos')
+            cadastro = cadastro.replace('\n', '').split('; ')
+            print(f' {cadastro[0]:<19} {cadastro[1]:>3}', 'ano' if int(cadastro[1]) <= 1 else 'anos')
 
     sleep(1)
 
