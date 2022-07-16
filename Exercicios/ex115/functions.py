@@ -65,8 +65,8 @@ def opcoes(esc):
             arquivo.read()
 
     except FileNotFoundError:
-        with open('cadastros.txt', 'w') as arquivo:
-            arquivo.write('')
+        with open('cadastros.txt', 'w+') as arquivo:
+            pass
 
     finally:
         # Cadastrar
